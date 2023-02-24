@@ -52,7 +52,6 @@ class Titulaire
     {
         echo $this->ville."<br>";
     }
-
     public function getInfos()
     {
         echo "Nom et prénom: $this->nom $this->prenom <br>";
@@ -64,7 +63,6 @@ class Titulaire
     {
         $this->comptes[] = $compte;
     }
-
     public function afficherUnCompte()
     {
         foreach ($this->comptes as $compte)
@@ -73,7 +71,6 @@ class Titulaire
             
         }
     }
-
     public function __toString()
     {
         $this->dateDeNaissance = $this->dateDeNaissance->format('Y-m-d');

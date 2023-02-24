@@ -68,7 +68,6 @@ class CompteBanquaire
     {
         $this->solde = $this->solde - $virementSomme;
     }
-
     public function virement($virementSomme, $destinataire)
     {
         if($virementSomme <= $this->solde)
@@ -76,14 +75,12 @@ class CompteBanquaire
             $destinataire->crediter($virementSomme);
             $this->debiter($virementSomme);
             echo "Virement effectuer<br>";
-
         }
         else
         {
             echo "Echec solde insuffisant <br>";
         }
     }
-
     public function __toString()
     {
         return $this->libelle." ".$this->solde." ".$this->deviseMonetaire."<br>";
