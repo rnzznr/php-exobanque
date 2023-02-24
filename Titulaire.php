@@ -16,8 +16,6 @@ class Titulaire
         $this->ville = $ville;
         $this->comptes = [];
     }
-
-    // set et get de $nom
     public function setNom($nom)
     {
         $this->nom = $nom;
@@ -27,7 +25,6 @@ class Titulaire
     {
         echo $this->nom."<br>";
     }
-    // set et get de $prenom
     public function setPrenom($prenom)
     {
         $this->prenom = $prenom;
@@ -37,7 +34,6 @@ class Titulaire
     {
         echo $this->prenom."<br>";
     }
-    // set et get de $dateDeNaissance
     public function setDateDeNaissance($dateDeNaissance)
     {
         $this->dateDeNaissance = $dateDeNaissance;
@@ -47,7 +43,6 @@ class Titulaire
     {
         echo $this->dateDeNaissance."<br>";
     }
-    // set et get de $ville
     public function setVille($ville)
     {
         $this->ville = $ville;
@@ -58,7 +53,6 @@ class Titulaire
         echo $this->ville."<br>";
     }
 
-    // methode getInfos
     public function getInfos()
     {
         echo "Nom et prénom: $this->nom $this->prenom <br>";
@@ -66,14 +60,11 @@ class Titulaire
         echo "Ville: $this->ville<br>";
         echo "Ensemble de compte: ".count($this->comptes)."<br>";
     }
-
-    // methode ajouter un compte
     public function ajouterUnCompte(CompteBanquaire $compte)
     {
         $this->comptes[] = $compte;
     }
 
-    // methode afficher un compte
     public function afficherUnCompte()
     {
         foreach ($this->comptes as $compte)

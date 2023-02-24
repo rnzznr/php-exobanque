@@ -17,8 +17,6 @@ class CompteBanquaire
         $titulaire->ajouterUnCompte($this);
         $this->virementSomme = 0;
     }
-
-    // set et get de $libelle
     public function setLibelle($libelle)
     {
         $this->libelle = $libelle;
@@ -28,7 +26,6 @@ class CompteBanquaire
     {
         echo $this->libelle;
     }
-    // set et get de $solde
     public function setSolde($solde)
     {
         $this->solde = $solde;
@@ -38,7 +35,6 @@ class CompteBanquaire
     {
         echo $this->solde."<br>";
     }
-    // set et get de $deviseMonetaire
     public function setDeviseMonetaire($deviseMonetaire)
     {
         $this->deviseMonetaire = $deviseMonetaire;
@@ -48,7 +44,6 @@ class CompteBanquaire
     {
         echo $this->deviseMonetaire."<br>";
     }
-    // set et get de $titulaire
     public function setTitulaire($titulaire)
     {
         $this->titulaire = $titulaire;
@@ -58,8 +53,6 @@ class CompteBanquaire
     {
         echo $this->titulaire."<br>";
     }
-
-    // methode getInfos
     public function getInfos()
     {
         echo "Titulaire: $this->titulaire";
@@ -67,19 +60,15 @@ class CompteBanquaire
         echo "Solde: $this->solde<br>";
         echo "Devise monetaire: $this->deviseMonetaire<br>";
     }
-
-    // methode crediter
     public function crediter($virementSomme)
     {
         $this->solde = $this->solde + $virementSomme;
     }
-    // methode debiter
     public function debiter($virementSomme)
     {
         $this->solde = $this->solde - $virementSomme;
     }
 
-    // methode virement
     public function virement($virementSomme, $destinataire)
     {
         if($virementSomme <= $this->solde)
